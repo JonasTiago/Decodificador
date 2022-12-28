@@ -1,12 +1,53 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Decodificador de Texto</title>
-</head>
-<body>
-    oi
-</body>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="assets/stylesheet/reset.css" />
+    <link rel="stylesheet" href="assets/stylesheet/style.css" />
+  </head>
+  <body>
+    <main>
+      <img src="assets/img/Vector.svg" alt="logo" class="logo" />
+      <section class="action">
+        <textarea
+          id="cript"
+          name=""
+          id=""
+          cols="30"
+          rows="10"
+          placeholder="Digite seu texto"
+        ></textarea>
+        <div>
+          <span class="alert">
+            <img src="assets/img/alert.svg" alt="alert" />
+            Apenas letras minúsculas e sem acento.
+          </span>
+          <button onclick="encrypt()">Criptografar</button>
+          <button  onclick="decrypt()" class="Descript">Descriptografar</button>
+        </div>
+      </section>
+      <section class="response">
+        <div class="noanswer">
+            <img src="assets/img/High quality products 1 1.svg" alt="bc"  />
+            <p class="">Nenhuma mensagem encontrada</p>
+            <span class="">
+              Digite um texto que você deseja criptografar ou descriptografar.
+            </span>
+        </div>
+        <span class="answer disappear">
+        </span>
+        <button class="copy disappear" onclick="copy()">Copiar</button>
+      </section>
+    </main>
+    <script src="assets/javascript/index.js"></script>
+  </body>
 </html>
