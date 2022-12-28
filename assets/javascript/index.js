@@ -21,3 +21,22 @@ function encrypt() {
     answer.textContent = textEncrypt;
   }
 }
+
+function decrypt() {
+    if (text.value.length > 0) {
+      const textEncrypt = text.value
+        .replace(/enter/g, "e")
+        .replace(/imes/g, "i")
+        .replace(/ai/g, "a")
+        .replace(/ober/g, "o")
+        .replace(/ufat/g, "u");
+  
+      noanswer.classList.add("disappear");
+  
+      answer.classList.remove("disappear");
+  
+      bntCopy.classList.remove("disappear");
+  
+      answer.textContent = textEncrypt;
+    }
+  }
