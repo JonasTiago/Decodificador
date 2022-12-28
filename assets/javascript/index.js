@@ -12,11 +12,7 @@ function encrypt() {
       .replace(/o/g, "ober")
       .replace(/u/g, "ufat");
 
-    noanswer.classList.add("disappear");
-
-    answer.classList.remove("disappear");
-
-    bntCopy.classList.remove("disappear");
+      toggleClass()  
 
     answer.textContent = textEncrypt;
   }
@@ -31,11 +27,8 @@ function decrypt() {
       .replace(/ober/g, "o")
       .replace(/ufat/g, "u");
 
-    noanswer.classList.add("disappear");
+    toggleClass()  
 
-    answer.classList.remove("disappear");
-
-    bntCopy.classList.remove("disappear");
 
     answer.textContent = textEncrypt;
   }
@@ -43,4 +36,15 @@ function decrypt() {
 
 function copy() {
   navigator.clipboard.writeText(answer.textContent);
+
+  setTimeout(toggleClass, 1000)
+  
+}
+
+function toggleClass(){
+  noanswer.classList.toggle("disappear");
+
+  answer.classList.toggle("disappear");
+
+  bntCopy.classList.toggle("disappear");
 }
